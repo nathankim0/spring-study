@@ -2,15 +2,19 @@ package com.nathan.nathanspring.service;
 
 import com.nathan.nathanspring.domain.Member;
 import com.nathan.nathanspring.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 //비즈니스 의존적, 기획자도 이해할 수 있게 용어 선택.
+@Service
 public class MemberService {
 
     private final MemoryMemberRepository memberRepository;
 
+    @Autowired
     public MemberService(MemoryMemberRepository memberRepository) { //DI
         this.memberRepository = memberRepository;
     }

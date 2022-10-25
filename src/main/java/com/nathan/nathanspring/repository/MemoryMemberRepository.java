@@ -1,9 +1,11 @@
 package com.nathan.nathanspring.repository;
 
 import com.nathan.nathanspring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+@Repository
 public class MemoryMemberRepository implements MemberRepository {
     private Map<Long, Member> store = new HashMap<>(); // 동시성 문제 고려 필요.
     private long sequence = 0L; // 동시성 문제 고려 필요.
