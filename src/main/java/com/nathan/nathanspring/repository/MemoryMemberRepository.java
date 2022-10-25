@@ -5,8 +5,8 @@ import com.nathan.nathanspring.domain.Member;
 import java.util.*;
 
 public class MemoryMemberRepository implements MemberRepository {
-    private static Map<Long, Member> store = new HashMap<>(); // 동시성 문제 고려 필요.
-    private static long sequence = 0L; // 동시성 문제 고려 필요.
+    private Map<Long, Member> store = new HashMap<>(); // 동시성 문제 고려 필요.
+    private long sequence = 0L; // 동시성 문제 고려 필요.
 
     @Override
     public Member save(Member member) {
