@@ -5,3 +5,4 @@
 - refactor: ```ctrl + t```
 - 매서드 추출: ```option + cmd + m```
 - Return 타입 맞게 선언: ```option + cmd + v```
+- 이전 실행 똑같이 실행: ctrl + r
