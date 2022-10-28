@@ -1,7 +1,13 @@
 package com.nathan.nathanspring.domain;
 
+import javax.persistence.*;
+
+@Entity
 public class Member {
+
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
 
     public String getName() {
